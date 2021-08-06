@@ -1,0 +1,4 @@
+Tarjeta=ABCD-ABCDEF-ABCD
+Fecha=20-8-2020
+PIN=0011
+NuevoPIN=ABCD

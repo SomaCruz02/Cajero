@@ -1,0 +1,5 @@
+Tarjeta=ABCD-ABCDEF-ABCD
+Fecha=20-8-2020
+Hora=22:47:5
+Monto=19
+Tipo=Deposito

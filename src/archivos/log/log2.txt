@@ -1,0 +1,6 @@
+Nombre=Henri Yaxcal
+Tarjeta=1234-123456-1234
+PIN=1234
+Limite=2000
+Fecha=20/8/2020
+Hora=11:2:4

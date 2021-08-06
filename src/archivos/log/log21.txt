@@ -1,0 +1,6 @@
+Nombre=Andres Tarott
+Tarjeta=5885-277733-2200
+PIN=A692
+Limite=2000
+Fecha=5/8/2021
+Hora=18:57:9
