@@ -1,0 +1,6 @@
+Nombre=Kevin Ochoa
+Tarjeta=1234123412341236
+PIN=1234
+Limite=10000
+Saldo=1000
+Tipo=user

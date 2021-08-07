@@ -1,0 +1,5 @@
+Tarjeta=5885-277733-2200
+Fecha=22-8-2020
+Hora=17:3:19
+Monto=5000
+Tipo=Deposito

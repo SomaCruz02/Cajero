@@ -1,0 +1,6 @@
+Nombre=Pedro Perez
+Tarjeta=ABCD-ABCDEF-ABCD
+PIN=9999
+Limite=5000
+Fecha=20/8/2020
+Hora=21:8:22

@@ -1,0 +1,7 @@
+Nombre=Pedro Perez
+Sexo=Masculino
+Tarjeta=ABCD-ABCDEF-ABCD
+PIN=8785
+Limite=5000
+Saldo=1319
+Tipo=user

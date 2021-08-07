@@ -1,0 +1,6 @@
+Nombre=Mario Armas
+Tarjeta=8888888888888888
+PIN=8888
+Limite=1100
+Saldo=1000
+Tipo=user

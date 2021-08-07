@@ -1,0 +1,6 @@
+Nombre=Carlos Mesa
+Tarjeta=3333333333333333
+PIN=3333
+Limite=100
+Saldo=1000
+Tipo=user

@@ -1,0 +1,7 @@
+Nombre=Henri Yaxcal
+Sexo=Masculino
+Tarjeta=1234-123456-1234
+PIN=1234
+Limite=3000
+Saldo=573
+Tipo=user

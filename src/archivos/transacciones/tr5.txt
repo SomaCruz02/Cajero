@@ -1,0 +1,5 @@
+Tarjeta=ABCD-ABCDEF-ABCD
+Fecha=20-8-2020
+Hora=22:27:16
+Monto=75
+Tipo=Retiro
