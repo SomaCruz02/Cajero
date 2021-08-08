@@ -70,7 +70,7 @@ public class CrearUsuario extends javax.swing.JFrame {
         
         for(int i=0;i<registros.length;i++){
         
-            File url = new File(ruta+registros[i].getName());
+            File url = new File(rutaUsuarios+registros[i].getName());
             try{
                 FileInputStream fis = new FileInputStream(url);
                 Properties mostrar = new Properties();
@@ -97,7 +97,7 @@ public class CrearUsuario extends javax.swing.JFrame {
         try{    
             
             crea_ubicación.mkdirs();
-            Formatter crear = new Formatter(ruta+archivo);          // Crea un archivo con los datos escritos
+            Formatter crear = new Formatter(rutaUsuarios+archivo);          // Crea un archivo con los datos escritos
             crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
                     "Nombre="+nombre.getText(),
                     "Tarjeta="+notarjeta.getText().toUpperCase(),

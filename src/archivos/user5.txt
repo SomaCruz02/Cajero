@@ -1,6 +1,6 @@
-Nombre=Mario Armas
-Tarjeta=8888888888888888
-PIN=8888
-Limite=1100
+Nombre=Carlos Meza
+Tarjeta=2121212121212121
+PIN=4444
+Limite=2000
 Saldo=1000
 Tipo=user
