@@ -23,6 +23,8 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
 
+//nuevo comentario
+
 
 public class frmLogin extends javax.swing.JFrame {
     
@@ -44,7 +46,7 @@ public class frmLogin extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setResizable(false);
         
-        //ordenarPorNumero(registros);        //Ordenar el Array de texto
+        //ordenarPorNumero(registros);        //Ordenar el Array de texto 
         
         for(int i=0;i<registros.length;i++){
         
