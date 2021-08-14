@@ -13,6 +13,7 @@ import Administrador.CrearUsuario;
  * @author carlo
  */
 //nuevo comentario
+//otro comentario
 public class frmMenu_Administrador extends javax.swing.JFrame {
 
     /**
