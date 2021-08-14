@@ -1,0 +1,6 @@
+Nombre=Carlos Meza
+Tarjeta=2121212121212121
+PIN=4444
+Limite=2000
+Fecha=14/8/2021
+Hora=17:31:14
