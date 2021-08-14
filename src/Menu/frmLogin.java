@@ -35,6 +35,8 @@ public class frmLogin extends javax.swing.JFrame {
     
     File contenedor = new File(rutaUsuarios);       
     File[] registros = contenedor.listFiles();      //Encuentra los registros de usuarios
+    
+    //comentario
 
     public user O;
     public ArrayList<user> a = new ArrayList<user>();
