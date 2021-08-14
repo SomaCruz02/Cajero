@@ -3,7 +3,6 @@ package Metodos;
 
 public class user {
     public String Nombre;
-    public String Sexo;
     public String Tarjeta;
     public String Pin;
     public int limite;

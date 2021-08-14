@@ -1,6 +1,6 @@
-Nombre=jose
-Tarjeta=1234567891234599
-PIN=4222
-Limite=2000
-Saldo=2000
+Nombre=Pedro
+Tarjeta=1212121212121212
+PIN=1212
+Limite=2
+Saldo=1
 Tipo=user

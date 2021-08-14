@@ -10,13 +10,14 @@ import Menu.frmMenu_Administrador;
 
 import java.io.File;
 import java.util.ArrayList;
-import Metodos.user;
+
 import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Formatter;
 import java.util.Properties;
 import javax.swing.JOptionPane;
+import Metodos.user;
 /**
  *
  * @author kevin
@@ -24,12 +25,9 @@ import javax.swing.JOptionPane;
 public class CrearUsuario extends javax.swing.JFrame {
 
     String barra = File.separator;      //Separador de la maquina 
-    String ruta = System.getProperty("user.dir")+barra+"src"+barra+"archivos"+barra;        //Ruta principal
-    String rutaUsuarios = ruta+"usuarios"+barra;        
-    String rutaCajero = ruta+"cajero"+barra;
-    String rutaLog = ruta+"log"+barra;
-    
-    File contenedor = new File(rutaUsuarios);       
+    String ruta = System.getProperty("user.dir")+barra+"src"+barra+"archivos"+barra+"usuarios"+barra;        //Ruta principal
+  
+    File contenedor = new File(ruta);       
     File[] registros = contenedor.listFiles();      //Encuentra los registros de usuarios
 
     public user O;
@@ -70,7 +68,7 @@ public class CrearUsuario extends javax.swing.JFrame {
         
         for(int i=0;i<registros.length;i++){
         
-            File url = new File(rutaUsuarios+registros[i].getName());
+            File url = new File(ruta+registros[i].getName());
             try{
                 FileInputStream fis = new FileInputStream(url);
                 Properties mostrar = new Properties();
@@ -97,7 +95,7 @@ public class CrearUsuario extends javax.swing.JFrame {
         try{    
             
             crea_ubicación.mkdirs();
-            Formatter crear = new Formatter(rutaUsuarios+archivo);          // Crea un archivo con los datos escritos
+            Formatter crear = new Formatter(ruta+archivo);          // Crea un archivo con los datos escritos
             crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
                     "Nombre="+nombre.getText(),
                     "Tarjeta="+notarjeta.getText().toUpperCase(),
