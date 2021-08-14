@@ -1,0 +1,6 @@
+Nombre=jose
+Tarjeta=1234567891234599
+PIN=4222
+Limite=2000
+Saldo=2000
+Tipo=user

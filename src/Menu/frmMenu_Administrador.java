@@ -12,6 +12,7 @@ import Administrador.CrearUsuario;
  *
  * @author carlo
  */
+//nuevo comentario
 public class frmMenu_Administrador extends javax.swing.JFrame {
 
     /**
@@ -21,7 +22,7 @@ public class frmMenu_Administrador extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setResizable(false);
-         this.getContentPane().setBackground(java.awt.Color.WHITE);
+        this.getContentPane().setBackground(java.awt.Color.WHITE);
     }
 
     /**
