@@ -121,6 +121,10 @@ public class frmPIN extends javax.swing.JFrame {
         );
     }
         
+    /*System.out.println("pin : "+a.get(aux-1).Pin);
+    System.out.println("Nombre : "+a.get(aux-1).Nombre);
+    System.out.println("Tarjeta : "+a.get(aux-1).Tarjeta);
+    System.out.println("Limite : "+a.get(aux-1).limite);  */  
     private void Crear(){
         String archivo = ("user")+(aux)+".txt";
         File crea_ubicación = new File(rutaUsuarios);
@@ -128,7 +132,7 @@ public class frmPIN extends javax.swing.JFrame {
         try{    
             crea_ubicación.mkdirs();
             Formatter crear = new Formatter(rutaUsuarios+archivo);
-            crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
+            crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
                     "Nombre="+a.get(aux-1).Nombre,
                     "Tarjeta="+a.get(aux-1).Tarjeta,
                     "PIN="+a.get(aux-1).Pin.toUpperCase(),
@@ -471,7 +475,7 @@ public class frmPIN extends javax.swing.JFrame {
             showMessageDialog(null, "PIN debe contener un total de 4 caracteres");
         }else if(pin1.equals(pin2)){
             if(pin.toUpperCase().equals(a.get(aux-1).Pin)){
-                a.get(aux-1).Pin = pin1.toUpperCase();      
+                a.get(aux-1).Pin = pin1.toUpperCase();    
                 Crear();
                 CrearCambios();
                 showMessageDialog(null, "Cambio de PIN exitoso");

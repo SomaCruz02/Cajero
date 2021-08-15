@@ -8,6 +8,7 @@ public class user {
     public int limite;
     public int saldo;
     public String tipo;
+    public String Sexo;
     
     public user(String Nombre, String Tarjeta, String Pin, int limite, int saldo, String tipo){
         this.Nombre = Nombre;
