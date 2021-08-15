@@ -49,7 +49,7 @@ public class frmPIN extends javax.swing.JFrame {
         
         ordenarPorNumero(registros);
         
-        File s = new File(ruta+"record.txt");
+        File s = new File(ruta+"record.txt");       //archivo "record" guarda la información de la ultima sección
         if(s.exists()){
             
             try{
@@ -67,7 +67,7 @@ public class frmPIN extends javax.swing.JFrame {
 
             }catch(Exception e){}
             
-            tarjeta.setText(b.get(0).Tarjeta);
+            tarjeta.setText(b.get(0).Tarjeta);      //
         }
             
             //SE REGISTRAN LOS DATOS DE LOS USUARIOS REGISTRADOS
@@ -121,11 +121,7 @@ public class frmPIN extends javax.swing.JFrame {
         );
     }
         
-    /*System.out.println("pin : "+a.get(aux-1).Pin);
-    System.out.println("Nombre : "+a.get(aux-1).Nombre);
-    System.out.println("Tarjeta : "+a.get(aux-1).Tarjeta);
-    System.out.println("Limite : "+a.get(aux-1).limite);  */  
-    private void Crear(){
+    private void Crear(){       //crea y sustituye por el cambio de PIN
         String archivo = ("user")+(aux)+".txt";
         File crea_ubicación = new File(rutaUsuarios);
                 
@@ -145,7 +141,7 @@ public class frmPIN extends javax.swing.JFrame {
         
     }
     
-    private void CrearCambios(){
+    private void CrearCambios(){        //lleva registro de los cambios realizados
 
         File contenedor = new File(rutaCambio);
         File[] registros = contenedor.listFiles();
@@ -479,6 +475,8 @@ public class frmPIN extends javax.swing.JFrame {
                 Crear();
                 CrearCambios();
                 showMessageDialog(null, "Cambio de PIN exitoso");
+            }else{
+                showMessageDialog(null, "PIN ingresado no coincide con el número de Tarjeta");
             }
         }else{
             showMessageDialog(null, "Confirmar PIN");

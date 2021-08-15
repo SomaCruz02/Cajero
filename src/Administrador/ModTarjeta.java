@@ -56,7 +56,7 @@ public class ModTarjeta extends javax.swing.JFrame {
     
     public ModTarjeta() {
         
-         initComponents();
+        initComponents();
         this.setLocationRelativeTo(null);
         setResizable(false);
         this.getContentPane().setBackground(java.awt.Color.WHITE);
@@ -304,8 +304,6 @@ private void Crear(int i){
         if(!E){
             Modificar();
             JOptionPane.showMessageDialog(null, "El numero de Tarjeta fue Cambiado con Exito", "Usuario", JOptionPane.INFORMATION_MESSAGE);
-           
-        
         }else{
             
         }

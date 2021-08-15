@@ -1,6 +1,6 @@
-Nombre=Edge
-Tarjeta=2222444455551111
-PIN=4321
-Limite=5000
+Nombre=Carlos Meza
+Tarjeta=2121212121212121
+PIN=5555
+Limite=2000
 Fecha=14/8/2021
-Hora=19:4:18
+Hora=19:43:8
