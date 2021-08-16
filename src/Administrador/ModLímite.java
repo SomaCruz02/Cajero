@@ -109,7 +109,64 @@ public class ModLímite extends javax.swing.JFrame {
             usuarios.addItem(a.get(i).Tarjeta);
         }
     }
+    
+    private void Crear(int i){
+        String archivo = ("user")+(i+1)+".txt";
+        File crea_ubicación = new File(rutaUsuarios);
+                
+        try{    
+            crea_ubicación.mkdirs();
+            Formatter crear = new Formatter(rutaUsuarios+archivo);
+            crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
+                    "Nombre="+a.get(i).Nombre,
+                    "Tarjeta="+a.get(i).Tarjeta,
+                    "PIN="+a.get(i).Pin,
+                    "Limite="+limite.getValue(),
+                    "Saldo="+a.get(i).saldo,
+                    "Tipo="+a.get(i).tipo);
+            crear.close();          
+            
+        }catch(Exception e){}    
+        
+        llenar();
+    }    
 
+    public void Modificar(){
+
+        for(int i = 0; i<a.size();i++){
+             if(usuarios.getSelectedItem().toString().equals(a.get(i).Tarjeta.toUpperCase())){
+                 int respuesta = JOptionPane.showConfirmDialog(null, "¿Desea realizar cambios?", "Ok", JOptionPane.YES_NO_OPTION);
+                 if(respuesta == JOptionPane.YES_OPTION){
+                    int x = a.get(i).limite - d.get(i).Limite;
+                    a.get(i).limite = Integer.parseInt(limite.getValue().toString());
+                    Crear(i);
+                    modLim(x, i);
+                    break;
+                 }
+
+             }             
+        }
+    }
+    
+    
+    private void modLim(int x, int i){
+        String archivo = "user"+(i+1)+".txt";
+        File crea_ubicación = new File(rutaLimite);
+                
+        try{    
+            
+            crea_ubicación.mkdirs();
+            Formatter crear = new Formatter(rutaLimite+archivo);
+            
+            crear.format("%s\r\n%s",
+                    "Tarjeta="+d.get(i).Tarjeta,
+                    "Limite="+(a.get(i).limite - x));
+            
+            crear.close();
+            
+        }catch(Exception e){}    
+        
+    }
 
         
     @SuppressWarnings("unchecked")
@@ -118,17 +175,14 @@ public class ModLímite extends javax.swing.JFrame {
 
         jLabel4 = new javax.swing.JLabel();
         usuarios = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
-        btncrear = new javax.swing.JButton();
+        btnaceptar = new javax.swing.JButton();
         btncrear2 = new javax.swing.JButton();
-        btncrear1 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        montolimite = new javax.swing.JSpinner();
-        jLabel7 = new javax.swing.JLabel();
+        limite = new javax.swing.JSpinner();
         jLabel8 = new javax.swing.JLabel();
-        montoactual = new javax.swing.JSpinner();
+        jLabel9 = new javax.swing.JLabel();
+        limiteactual = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -136,22 +190,24 @@ public class ModLímite extends javax.swing.JFrame {
         jLabel4.setText("Numero de Tarjeta:");
 
         usuarios.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        usuarios.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                usuariosItemStateChanged(evt);
+            }
+        });
         usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usuariosActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setText("Nuevo Numero:");
-
-        btncrear.setBackground(new java.awt.Color(51, 51, 51));
-        btncrear.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        btncrear.setForeground(new java.awt.Color(255, 255, 255));
-        btncrear.setText("Ingresar Datos");
-        btncrear.addActionListener(new java.awt.event.ActionListener() {
+        btnaceptar.setBackground(new java.awt.Color(51, 51, 51));
+        btnaceptar.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btnaceptar.setForeground(new java.awt.Color(255, 255, 255));
+        btnaceptar.setText("Aceptar");
+        btnaceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncrearActionPerformed(evt);
+                btnaceptarActionPerformed(evt);
             }
         });
 
@@ -164,20 +220,6 @@ public class ModLímite extends javax.swing.JFrame {
                 btncrear2ActionPerformed(evt);
             }
         });
-
-        btncrear1.setBackground(new java.awt.Color(255, 0, 0));
-        btncrear1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        btncrear1.setForeground(new java.awt.Color(51, 51, 51));
-        btncrear1.setText("Eliminar Texto");
-        btncrear1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncrear1ActionPerformed(evt);
-            }
-        });
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 2, 10)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel9.setText("16 Digitos");
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -200,17 +242,16 @@ public class ModLímite extends javax.swing.JFrame {
                 .addComponent(jLabel3))
         );
 
-        montolimite.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        montolimite.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel7.setText("Monto Actual:");
+        limite.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        limite.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel8.setText("Monto Limite:");
+        jLabel8.setText("Nuevo Límite:");
 
-        montoactual.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        montoactual.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel9.setText("Límite Actual");
+
+        limiteactual.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -224,26 +265,23 @@ public class ModLímite extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btncrear, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btncrear1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btncrear2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel8)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(montoactual, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(montolimite, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(limiteactual, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(45, 45, 45)
+                                .addComponent(btnaceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(limite, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(36, 36, 36)
+                                .addComponent(btncrear2, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -257,20 +295,15 @@ public class ModLímite extends javax.swing.JFrame {
                 .addComponent(usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(jLabel8)
                     .addComponent(jLabel9))
-                .addGap(44, 44, 44)
-                .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(montoactual, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(montolimite, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(limite, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(limiteactual))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btncrear1)
-                    .addComponent(btncrear)
+                    .addComponent(btnaceptar)
                     .addComponent(btncrear2))
                 .addGap(66, 66, 66))
         );
@@ -282,19 +315,27 @@ public class ModLímite extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usuariosActionPerformed
 
-    private void btncrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncrearActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_btncrearActionPerformed
+    private void btnaceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaceptarActionPerformed
+        Modificar();    
+    }//GEN-LAST:event_btnaceptarActionPerformed
 
     private void btncrear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncrear2ActionPerformed
-        // TODO add your handling code here:
-
+        frmMenu_Administrador x = new frmMenu_Administrador();
+        this.setVisible(false);
+        x.setVisible(true); // Regresar al menu de administrador
     }//GEN-LAST:event_btncrear2ActionPerformed
 
-    private void btncrear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncrear1ActionPerformed
+    private void usuariosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_usuariosItemStateChanged
+        if(usuarios.getItemCount()>=1){
+            for(int i = 0; i<a.size();i++){
 
-    }//GEN-LAST:event_btncrear1ActionPerformed
+                 if(usuarios.getSelectedItem().toString().equals(a.get(i).Tarjeta.toUpperCase())){
+                     limiteactual.setText(a.get(i).limite+"");
+                     break;
+                 }             
+            }
+        }
+    }//GEN-LAST:event_usuariosItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -332,18 +373,15 @@ public class ModLímite extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btncrear;
-    private javax.swing.JButton btncrear1;
+    private javax.swing.JButton btnaceptar;
     private javax.swing.JButton btncrear2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner montoactual;
-    private javax.swing.JSpinner montolimite;
+    private javax.swing.JSpinner limite;
+    private javax.swing.JTextField limiteactual;
     private javax.swing.JComboBox<String> usuarios;
     // End of variables declaration//GEN-END:variables
 }

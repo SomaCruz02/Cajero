@@ -1,2 +1,2 @@
 Tarjeta=ABCD-ABCDEF-ABCD
-Limite=5000
+Limite=10000

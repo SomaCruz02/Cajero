@@ -1,6 +1,6 @@
 Nombre=Administrador
 Tarjeta=7777
 PIN=7777
-Limite=10000
+Limite=7000
 Saldo=2000
 Tipo=admin

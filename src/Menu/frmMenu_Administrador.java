@@ -6,6 +6,7 @@
 package Menu;
 
 import Administrador.CrearUsuario;
+import Administrador.ModLímite;
 import Administrador.ModTarjeta;
 //import javafx.scene.paint.Color;  ?? Deje comentada esta parte para que no me tire error . -Mario
 
@@ -292,7 +293,9 @@ public class frmMenu_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_btninicializarActionPerformed
 
     private void btnlimiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimiteActionPerformed
-        // TODO add your handling code here:
+        ModLímite x = new ModLímite();
+        this.setVisible(false); 
+        x.setVisible(true); 
     }//GEN-LAST:event_btnlimiteActionPerformed
 
     private void btnlimite1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimite1ActionPerformed
