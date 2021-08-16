@@ -18,7 +18,7 @@ public class frmMenu_usuarios extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setResizable(false);
-        this.getContentPane().setBackground(java.awt.Color.WHITE);
+         this.getContentPane().setBackground(java.awt.Color.WHITE);
     }
 
     /**
@@ -226,9 +226,7 @@ public class frmMenu_usuarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncambiarpinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncambiarpinActionPerformed
-        frmPIN cambiarpin = new frmPIN();
-        this.setVisible(false);
-        cambiarpin.setVisible(true);
+        // TODO add your handling code here:
  
     }//GEN-LAST:event_btncambiarpinActionPerformed
 
