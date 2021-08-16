@@ -1,6 +1,6 @@
 Nombre=Administrador
 Tarjeta=7777
-PIN=6666
-Limite=10000
+PIN=7777
+Limite=7000
 Fecha=16/8/2021
-Hora=14:34:26
+Hora=15:26:26

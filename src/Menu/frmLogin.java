@@ -289,7 +289,7 @@ public class frmLogin extends javax.swing.JFrame {
         String T = txtTarjeta.getText();
         String P = txtPin.getText();
         String Error1 = "";
-        //File f = new File(rutaCajero+fecha("-")+".txt");
+        File f = new File(rutaCajero+fecha("-")+".txt");
         
         for(int i = 0; i<a.size();i++){
             if(a.get(i).Tarjeta.equals(T.toUpperCase())){      //Verificar que la tarjeta existe
@@ -303,11 +303,15 @@ public class frmLogin extends javax.swing.JFrame {
                              showMessageDialog(null, "Cuenta sin los permisos necesarios");
                         }
                     }else{
-                        Crear(i);
-                        //Login(i);
-                        frmMenu_usuarios window = new frmMenu_usuarios();
-                        this.setVisible(false);
-                        window.setVisible(true);
+                        if (f.exists()) {       //Si se ha iniciado cajero
+                            Crear(i);
+                            //Login(i);
+                            frmMenu_usuarios window = new frmMenu_usuarios();
+                            this.setVisible(false);
+                            window.setVisible(true);
+                        }else{
+                            showMessageDialog(null, "Cajero no inicializado");
+                        }
                     }
                  
                 }else{
