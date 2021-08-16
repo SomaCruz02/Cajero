@@ -226,7 +226,9 @@ public class frmMenu_usuarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncambiarpinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncambiarpinActionPerformed
-        // TODO add your handling code here:
+        frmPIN x = new frmPIN ();
+        this.setVisible(false);
+        x.setVisible(true); 
  
     }//GEN-LAST:event_btncambiarpinActionPerformed
 

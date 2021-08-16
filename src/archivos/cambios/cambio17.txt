@@ -1,0 +1,4 @@
+Tarjeta=7777
+Fecha=16-8-2021
+PIN=6666
+NuevoPIN=7777

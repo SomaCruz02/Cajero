@@ -119,8 +119,8 @@ public class frmLogin extends javax.swing.JFrame {
         
     }*/
     
-    /*private void Crear(int i){
-        String archivo = ("sesion")+".txt";     //nombre del archivo .txt
+    private void Crear(int i){
+        String archivo = ("record")+".txt";     //nombre del archivo .txt
         File crea_ubicación = new File(ruta);       //ubicación del archivo
                 
         try{    
@@ -140,15 +140,15 @@ public class frmLogin extends javax.swing.JFrame {
             
         }catch(Exception e){}     
         
-    }*/
+    }
     
-    /*public String fecha(String s){
+    public String fecha(String s){
         return ZonedDateTime.now().getDayOfMonth()+s+ZonedDateTime.now().getMonthValue()+s+ZonedDateTime.now().getYear();
-    }*
+    }
     
     public String Hora(){
         return ZonedDateTime.now().getHour()+":"+ZonedDateTime.now().getMinute()+":"+ZonedDateTime.now().getSecond();
-    }*/
+    }
 
     
 
@@ -303,7 +303,7 @@ public class frmLogin extends javax.swing.JFrame {
                              showMessageDialog(null, "Cuenta sin los permisos necesarios");
                         }
                     }else{
-                        //Crear(i);
+                        Crear(i);
                         //Login(i);
                         frmMenu_usuarios window = new frmMenu_usuarios();
                         this.setVisible(false);

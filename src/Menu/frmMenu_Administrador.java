@@ -273,7 +273,9 @@ public class frmMenu_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_btncrearActionPerformed
 
     private void btnagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregarActionPerformed
-        // TODO add your handling code here:
+        frmAggEfectivo_Admin x = new frmAggEfectivo_Admin();
+        this.setVisible(false); 
+        x.setVisible(true);     
     }//GEN-LAST:event_btnagregarActionPerformed
 
     private void btnmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmodificarActionPerformed
@@ -284,7 +286,9 @@ public class frmMenu_Administrador extends javax.swing.JFrame {
     }//GEN-LAST:event_btnmodificarActionPerformed
 
     private void btninicializarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninicializarActionPerformed
-        // TODO add your handling code here:
+        frmIniciaCajero_Admin x = new frmIniciaCajero_Admin();
+        this.setVisible(false); 
+        x.setVisible(true); 
     }//GEN-LAST:event_btninicializarActionPerformed
 
     private void btnlimiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimiteActionPerformed
