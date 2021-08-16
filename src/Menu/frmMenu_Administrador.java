@@ -6,6 +6,7 @@
 package Menu;
 
 import Administrador.CrearUsuario;
+import Administrador.ModTarjeta;
 //import javafx.scene.paint.Color;  ?? Deje comentada esta parte para que no me tire error . -Mario
 
 /**
@@ -277,6 +278,9 @@ public class frmMenu_Administrador extends javax.swing.JFrame {
 
     private void btnmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmodificarActionPerformed
         // TODO add your handling code here:
+        ModTarjeta x = new ModTarjeta();
+        this.setVisible(false); 
+        x.setVisible(true); //Abrir el menu de creacion de usuario
     }//GEN-LAST:event_btnmodificarActionPerformed
 
     private void btninicializarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninicializarActionPerformed

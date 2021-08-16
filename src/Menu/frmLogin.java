@@ -121,9 +121,9 @@ public class frmLogin extends javax.swing.JFrame {
         
     }*/
     
-    /*private void Crear(int i){
-        String archivo = ("sesion")+".txt";     //nombre del archivo .txt
-        File crea_ubicación = new File(ruta);       //ubicación del archivo
+    private void Crear(int i){
+        String archivo = ("record")+".txt";     //nombre del archivo .txt
+        File crea_ubicación = new File(ruta);       //GUARDA QUIEN INICIO SECCIÓN
                 
         try{    
             
@@ -142,15 +142,15 @@ public class frmLogin extends javax.swing.JFrame {
             
         }catch(Exception e){}     
         
-    }*/
+    }
     
-    /*public String fecha(String s){
+    public String fecha(String s){
         return ZonedDateTime.now().getDayOfMonth()+s+ZonedDateTime.now().getMonthValue()+s+ZonedDateTime.now().getYear();
-    }*
+    }
     
     public String Hora(){
         return ZonedDateTime.now().getHour()+":"+ZonedDateTime.now().getMinute()+":"+ZonedDateTime.now().getSecond();
-    }*/
+    }
 
     
 
@@ -261,7 +261,7 @@ public class frmLogin extends javax.swing.JFrame {
                 .addComponent(lblTarjeta1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblTarjeta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -269,7 +269,7 @@ public class frmLogin extends javax.swing.JFrame {
                 .addComponent(checkbox)
                 .addGap(66, 66, 66)
                 .addComponent(btnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -305,7 +305,7 @@ public class frmLogin extends javax.swing.JFrame {
                              showMessageDialog(null, "Cuenta sin los permisos necesarios");
                         }
                     }else{
-                        //Crear(i);
+                        Crear(i);       //Entra como Usuario
                         //Login(i);
                         frmMenu_usuarios window = new frmMenu_usuarios();
                         this.setVisible(false);

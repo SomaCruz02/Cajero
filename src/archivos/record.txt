@@ -1,0 +1,6 @@
+Nombre=Carlos Meza
+Tarjeta=2121212121212121
+PIN=5555
+Limite=2000
+Fecha=14/8/2021
+Hora=19:43:8

@@ -1,6 +1,6 @@
-Nombre=Diego Andrés
-Tarjeta=1234567890123456
-PIN=2222
-Limite=2220
-Saldo=660
+Nombre=Edge
+Tarjeta=2222444455551111
+PIN=4321
+Limite=5000
+Saldo=1086
 Tipo=user

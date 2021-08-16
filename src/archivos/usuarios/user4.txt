@@ -1,7 +1,6 @@
-Nombre=Pedro Perez
-Sexo=Masculino
-Tarjeta=ABCD-ABCDEF-ABCD
-PIN=8785
-Limite=5000
-Saldo=1319
+Nombre=Carlos Mesa
+Tarjeta=3333333333333333
+PIN=3333
+Limite=100
+Saldo=1000
 Tipo=user
