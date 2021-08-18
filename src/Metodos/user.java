@@ -17,5 +17,9 @@ public class user {
         this.saldo = saldo;
         this.tipo = tipo;
     }
+
+    public user(String property, String property0, String property1, String property2, int parseInt, int parseInt0, String property3) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
