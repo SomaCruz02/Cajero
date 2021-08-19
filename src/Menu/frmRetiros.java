@@ -163,24 +163,7 @@ public class frmRetiros extends javax.swing.JFrame {
     }//GEN-LAST:event_formMousePressed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        String pin = txtpin.getText();
-        String pin1 = txtnpin.getText();
-        String pin2 = txtnpin1.getText();
 
-        if(pin.length()>4 || pin1.length()>4 || pin2.length()>4) {
-            showMessageDialog(null, "PIN debe contener un total de 4 caracteres");
-        }else if(pin1.equals(pin2)){
-            if(pin.toUpperCase().equals(a.get(aux-1).Pin)){
-                a.get(aux-1).Pin = pin1.toUpperCase();
-                Crear();
-                CrearCambios();
-                showMessageDialog(null, "Cambio de PIN exitoso");
-            }else{
-                showMessageDialog(null, "PIN ingresado no coincide con el número de Tarjeta");
-            }
-        }else{
-            showMessageDialog(null, "Confirmar PIN");
-        }
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void btnAceptar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptar1ActionPerformed
