@@ -233,7 +233,9 @@ public class frmMenu_usuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btncambiarpinActionPerformed
 
     private void btnretirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnretirarActionPerformed
-        // TODO add your handling code here:
+        frmRetiros x = new frmRetiros();
+        this.setVisible(false);
+        x.setVisible(true);
     }//GEN-LAST:event_btnretirarActionPerformed
 
     private void btndepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndepositarActionPerformed

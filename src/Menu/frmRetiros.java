@@ -5,6 +5,8 @@
  */
 package Menu;
 
+import java.awt.Color;
+
 /**
  *
  * @author carlo_w8yoedd
@@ -16,6 +18,9 @@ public class frmRetiros extends javax.swing.JFrame {
      */
     public frmRetiros() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        setResizable(false);
+        this.getContentPane().setBackground(java.awt.Color.LIGHT_GRAY);
     }
 
     /**
@@ -27,21 +32,160 @@ public class frmRetiros extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        tarjeta = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtretiro = new javax.swing.JTextField();
+        btnAceptar = new javax.swing.JButton();
+        btnAceptar1 = new javax.swing.JButton();
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Cambiar PIN");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                formMousePressed(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        tarjeta.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        tarjeta.setForeground(new java.awt.Color(255, 255, 255));
+        tarjeta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tarjeta.setText("Retirar Efectivo");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tarjeta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(tarjeta)
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Ingrese la cantidad que desea retirar:");
+
+        txtretiro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtretiro.setForeground(new java.awt.Color(204, 204, 204));
+        txtretiro.setText("INGRESE LA CANTIDAD A RETIRAR");
+        txtretiro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                txtretiroMousePressed(evt);
+            }
+        });
+
+        btnAceptar.setBackground(new java.awt.Color(102, 102, 102));
+        btnAceptar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAceptar.setForeground(new java.awt.Color(255, 255, 255));
+        btnAceptar.setText("REGRESAR");
+        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAceptarActionPerformed(evt);
+            }
+        });
+
+        btnAceptar1.setBackground(new java.awt.Color(255, 102, 51));
+        btnAceptar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAceptar1.setForeground(new java.awt.Color(255, 255, 255));
+        btnAceptar1.setText("ACEPTAR");
+        btnAceptar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAceptar1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 661, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnAceptar1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtretiro, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(txtretiro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAceptar)
+                    .addComponent(btnAceptar1))
+                .addGap(24, 24, 24))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtretiroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtretiroMousePressed
+        String retiro = txtretiro.getText();
+        if(retiro.equals("INGRESE LA CANTIDAD A RETIRAR")){
+            txtretiro.setText("");
+            txtretiro.setForeground(Color.BLACK);
+        }
+    }//GEN-LAST:event_txtretiroMousePressed
+
+    private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
+        String retiro = txtretiro.getText();
+        if(retiro.isEmpty()){
+            txtretiro.setText("INGRESE LA CANTIDAD A RETIRAR");
+            txtretiro.setForeground(Color.LIGHT_GRAY);
+        }
+    }//GEN-LAST:event_formMousePressed
+
+    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
+        String pin = txtpin.getText();
+        String pin1 = txtnpin.getText();
+        String pin2 = txtnpin1.getText();
+
+        if(pin.length()>4 || pin1.length()>4 || pin2.length()>4) {
+            showMessageDialog(null, "PIN debe contener un total de 4 caracteres");
+        }else if(pin1.equals(pin2)){
+            if(pin.toUpperCase().equals(a.get(aux-1).Pin)){
+                a.get(aux-1).Pin = pin1.toUpperCase();
+                Crear();
+                CrearCambios();
+                showMessageDialog(null, "Cambio de PIN exitoso");
+            }else{
+                showMessageDialog(null, "PIN ingresado no coincide con el número de Tarjeta");
+            }
+        }else{
+            showMessageDialog(null, "Confirmar PIN");
+        }
+    }//GEN-LAST:event_btnAceptarActionPerformed
+
+    private void btnAceptar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAceptar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +223,12 @@ public class frmRetiros extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnAceptar1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel tarjeta;
+    private javax.swing.JTextField txtretiro;
     // End of variables declaration//GEN-END:variables
 }
