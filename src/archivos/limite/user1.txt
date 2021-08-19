@@ -1,2 +1,2 @@
-Tarjeta=6388-858521-6977
+Tarjeta=7777
 Limite=7000

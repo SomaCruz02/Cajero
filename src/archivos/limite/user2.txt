@@ -1,2 +1,2 @@
-Tarjeta=5885-277733-2200
+Tarjeta=6666
 Limite=2000

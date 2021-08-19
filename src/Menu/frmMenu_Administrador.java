@@ -8,6 +8,10 @@ package Menu;
 import Administrador.CrearUsuario;
 import Administrador.ModLímite;
 import Administrador.ModTarjeta;
+import java.io.File;
+import java.time.ZonedDateTime;
+import javafx.scene.paint.Color;
+import static javax.swing.JOptionPane.showMessageDialog;
 //import javafx.scene.paint.Color;  ?? Deje comentada esta parte para que no me tire error . -Mario
 
 /**
@@ -15,17 +19,38 @@ import Administrador.ModTarjeta;
  * @author carlo
  */
 public class frmMenu_Administrador extends javax.swing.JFrame {
+    
+    String barra = File.separator;
 
-    /**
-     * Creates new form frmMenu_Administrador
-     */
+    String ruta = System.getProperty("user.dir")+barra+"src"+barra+"archivos"+barra;        //Ruta principal
+    String rutaUsuarios = ruta+"usuarios"+barra;        
+    String rutaCajero = ruta+"cajero"+barra;
+
     public frmMenu_Administrador() {
         initComponents();
         this.setLocationRelativeTo(null);
         setResizable(false);
          this.getContentPane().setBackground(java.awt.Color.WHITE);
+         
+        File f = new File(rutaCajero+fecha("-")+".txt");        //Archivo donde se guarda la información del cajero del día
+        
+        if (f.exists()) {       //Si se ha iniciado cajero hoy
+            btnagregar.setEnabled(true);
+            btninicializar.setEnabled(false);
+        }else{
+            btnagregar.setEnabled(false);
+            btninicializar.setEnabled(true);
+        }
     }
 
+    
+    public String fecha(String s){
+        return ZonedDateTime.now().getDayOfMonth()+s+ZonedDateTime.now().getMonthValue()+s+ZonedDateTime.now().getYear();
+    }
+    
+    public String Hora(){
+        return ZonedDateTime.now().getHour()+":"+ZonedDateTime.now().getMinute()+":"+ZonedDateTime.now().getSecond();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
