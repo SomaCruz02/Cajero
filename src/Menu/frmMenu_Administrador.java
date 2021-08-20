@@ -17,8 +17,9 @@ import static javax.swing.JOptionPane.showMessageDialog;
 /**
  *
  * @author carlo
- * PICALE CON LOS GITHUB VOS
+ *
  */
+//
 public class frmMenu_Administrador extends javax.swing.JFrame {
     
     String barra = File.separator;
