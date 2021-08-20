@@ -1,6 +1,6 @@
-Nombre=Administrador
-Tarjeta=7777
-PIN=7777
-Limite=7000
-Fecha=19/8/2021
-Hora=16:28:7
+Nombre=Andres Tarott
+Tarjeta=6666
+PIN=6666
+Limite=2000
+Fecha=20/8/2021
+Hora=17:6:47

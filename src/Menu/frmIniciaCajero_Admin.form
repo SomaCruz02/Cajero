@@ -168,12 +168,11 @@
                           <Component id="Saldo" min="-2" pref="31" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Ingresar" alignment="0" pref="33" max="32767" attributes="0"/>
+                      <Component id="Ingresar" alignment="0" max="32767" attributes="0"/>
                       <Component id="Borrar" alignment="0" max="32767" attributes="0"/>
                       <Component id="Cancelar" alignment="0" max="32767" attributes="0"/>
                   </Group>

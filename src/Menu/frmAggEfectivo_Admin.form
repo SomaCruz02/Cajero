@@ -187,7 +187,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jButton3" max="32767" attributes="0"/>
                       <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="Ingresar" alignment="0" pref="33" max="32767" attributes="0"/>
+                      <Component id="Ingresar" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>

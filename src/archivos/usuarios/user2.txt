@@ -2,5 +2,5 @@ Nombre=Andres Tarott
 Tarjeta=6666
 PIN=6666
 Limite=2000
-Saldo=6100
+Saldo=4600
 Tipo=user

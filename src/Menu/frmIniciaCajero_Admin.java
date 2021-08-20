@@ -112,7 +112,7 @@ public class frmIniciaCajero_Admin extends javax.swing.JFrame {
             crea_ubicación.mkdirs();
             Formatter crear = new Formatter(ubi1+archivo);
             
-            crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
+            crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
                     "Saldo="+Saldo.getValue(),
                     "Q200="+Q200.getValue(),
                     "Q100="+Q100.getValue(),

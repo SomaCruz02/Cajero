@@ -114,7 +114,7 @@ public class frmAggEfectivo_Admin extends javax.swing.JFrame {
             crea_ubicación.mkdirs();
             Formatter crear = new Formatter(ubi1+archivo);
             
-            crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
+            crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
                     "Saldo="+(Integer.parseInt(Saldo.getValue().toString())+a.get(0).Saldo),
                     "Q200="+(Integer.parseInt(Q200.getValue().toString())+a.get(0).Q200),
                     "Q100="+(Integer.parseInt(Q100.getValue().toString())+a.get(0).Q100),
