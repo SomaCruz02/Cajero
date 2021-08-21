@@ -303,7 +303,7 @@ private void Crear(int i){
         
         if(!E){
             Modificar();
-            JOptionPane.showMessageDialog(null, "El numero de Tarjeta fue Cambiado con Exito", "Usuario", JOptionPane.INFORMATION_MESSAGE);
+            
            
         
         }else{
@@ -329,9 +329,16 @@ public void Modificar(){
 
         for(int i = 0; i<a.size();i++){
              if(usuarios.getSelectedItem().toString().equals(a.get(i).Tarjeta.toUpperCase())){
-                 a.get(i).Tarjeta = notarjeta.getText().toUpperCase();
-                 Crear(i);
-                 break;
+                 int respuesta = JOptionPane.showConfirmDialog(null, "¿Desea realizar cambios?", "Ok", JOptionPane.YES_NO_OPTION);
+                 if(respuesta == JOptionPane.YES_OPTION){
+                   a.get(i).Tarjeta = notarjeta.getText().toUpperCase();
+                   Crear(i); 
+                   JOptionPane.showMessageDialog(null, "El numero de Tarjeta fue Cambiado con Exito", "Usuario", JOptionPane.INFORMATION_MESSAGE);
+                    break;
+                 } else if(respuesta == JOptionPane.NO_OPTION){
+                    JOptionPane.showMessageDialog(null, "Cambio no Realizado", "Usuario", JOptionPane.INFORMATION_MESSAGE); 
+                 }
+       
              }             
         }
         

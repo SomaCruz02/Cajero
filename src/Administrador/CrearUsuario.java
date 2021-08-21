@@ -372,12 +372,12 @@ public class CrearUsuario extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Verificar el Campo 'Nombre'", "Error", JOptionPane.ERROR_MESSAGE);
         }
         
-        int montoac = (int) montoactual.getValue();
-        int montoli =(int) montolimite.getValue();
-        if(montoac>montoli){
-            E = true;
-            JOptionPane.showMessageDialog(null, "El monto Limite debe ser menor al monto actual", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+//        int montoac = (int) montoactual.getValue();
+//        int montoli =(int) montolimite.getValue();
+//        if(montoac>montoli){
+//            E = true;
+//            JOptionPane.showMessageDialog(null, "El monto Limite debe ser menor al monto actual", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
         
         if(!E){
             Crear();
