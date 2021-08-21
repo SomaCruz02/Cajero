@@ -3,4 +3,4 @@ Tarjeta=6666
 PIN=6666
 Limite=2000
 Fecha=20/8/2021
-Hora=17:6:47
+Hora=18:3:7

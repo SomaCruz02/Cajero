@@ -1,6 +1,6 @@
-Nombre=Carlos Meza Guzmán
+Nombre=Carlos Meza GuzmÃ¡n
 Tarjeta=1234123412341234
 PIN=1234
 Limite=1000
-Saldo=500
+Saldo=100
 Tipo=user

@@ -95,7 +95,7 @@ public class frmRetiros extends javax.swing.JFrame {
     }
     
     
-        private void modUser(int nSaldo){
+    private void modUser(int nSaldo){
         String archivo = "user"+(auxiliar+1)+".txt";
         File crea_ubicación = new File(ubi4);
                 
@@ -253,13 +253,13 @@ public class frmRetiros extends javax.swing.JFrame {
                 mostrar.load(fis);               
 
                 O = new inic(Integer.parseInt(mostrar.getProperty("Saldo")),
-                                    Integer.parseInt(mostrar.getProperty("Q200")),
-                                    Integer.parseInt(mostrar.getProperty("Q100")),
-                                    Integer.parseInt(mostrar.getProperty("Q50")),
-                                    Integer.parseInt(mostrar.getProperty("Q20")),
-                                    Integer.parseInt(mostrar.getProperty("Q10")),
-                                    Integer.parseInt(mostrar.getProperty("Q5")),
-                                    Integer.parseInt(mostrar.getProperty("Q1")));
+                                    Integer.parseInt(mostrar.getProperty("B200")),
+                                    Integer.parseInt(mostrar.getProperty("B100")),
+                                    Integer.parseInt(mostrar.getProperty("B50")),
+                                    Integer.parseInt(mostrar.getProperty("B20")),
+                                    Integer.parseInt(mostrar.getProperty("B10")),
+                                    Integer.parseInt(mostrar.getProperty("B5")),
+                                    Integer.parseInt(mostrar.getProperty("B1")));
                 a.add(O);
                 
             }catch(Exception e){}
@@ -412,9 +412,9 @@ public class frmRetiros extends javax.swing.JFrame {
         
         if(Integer.parseInt(txtretiro.getValue().toString())>d.get(0).Limite){
             E = 1;        
-        }else if(Integer.parseInt(txtretiro.getValue().toString())>a.get(0).Saldo){
+        /*}else if(Integer.parseInt(txtretiro.getValue().toString())>a.get(0).Saldo){
             E = 2;
-        }else if(Integer.parseInt(txtretiro.getValue().toString())>c.get(0).saldo){
+        */}else if(Integer.parseInt(txtretiro.getValue().toString())>c.get(0).saldo){
             E = 3;
         }else{
             int saldo = Integer.parseInt(txtretiro.getValue().toString());
