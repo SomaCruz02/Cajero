@@ -2,5 +2,5 @@ Nombre=Maria
 Tarjeta=3232323232323232
 PIN=3232
 Limite=2
-Saldo=1
+Saldo=101
 Tipo=user

@@ -1,0 +1,5 @@
+Tarjeta=3232323232323232
+Fecha=20-8-2021
+Hora=20:11:42
+Monto=100
+Tipo=Deposito

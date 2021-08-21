@@ -240,6 +240,9 @@ public class frmMenu_usuarios extends javax.swing.JFrame {
 
     private void btndepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndepositarActionPerformed
         // TODO add your handling code here:
+         frmDepositar x = new frmDepositar();
+        this.setVisible(false);
+        x.setVisible(true); // 
     }//GEN-LAST:event_btndepositarActionPerformed
 
     private void btntransaccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntransaccionesActionPerformed
