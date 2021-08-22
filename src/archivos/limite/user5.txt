@@ -1,2 +1,2 @@
 Tarjeta=1234123412341234
-Limite=600
+Limite=1000

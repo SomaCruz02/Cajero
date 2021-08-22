@@ -1,6 +1,6 @@
-Nombre=Maria
-Tarjeta=3232323232323232
-PIN=3232
-Limite=2
-Fecha=20/8/2021
-Hora=20:11:36
+Nombre=Andres Tarott
+Tarjeta=6666
+PIN=6666
+Limite=2000
+Fecha=21/8/2021
+Hora=18:18:1

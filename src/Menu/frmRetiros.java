@@ -69,7 +69,7 @@ public class frmRetiros extends javax.swing.JFrame {
         );
     }
     
-    private void Crear(){
+    private void Crear(){       //Crear registro de la transacción 
         File contenedor = new File(ubi1);
         File[] registros = contenedor.listFiles();
         
@@ -95,7 +95,7 @@ public class frmRetiros extends javax.swing.JFrame {
     }
     
     
-    private void modUser(int nSaldo){
+    private void modUser(int nSaldo){       //Modificar la información del usuario   
         String archivo = "user"+(auxiliar+1)+".txt";
         File crea_ubicación = new File(ubi4);
                 
@@ -118,7 +118,7 @@ public class frmRetiros extends javax.swing.JFrame {
         modLim(nSaldo);
     }
     
-    private void modCajero(int B200, int B100, int B50, int B20, int B10, int B5, int B1, int nSaldo){
+    private void modCajero(int B200, int B100, int B50, int B20, int B10, int B5, int B1, int nSaldo){      //Modificar la información del cajero
         String archivo = fecha()+".txt";
         File crea_ubicación = new File(ubi3);
                 
@@ -128,14 +128,14 @@ public class frmRetiros extends javax.swing.JFrame {
             Formatter crear = new Formatter(ubi3+archivo);
             
             crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
-                    "Saldo="+(a.get(0).Saldo-nSaldo),
-                    "B200="+(a.get(0).Q200-B200),
-                    "B100="+(a.get(0).Q100-B100),
-                    "B50="+(a.get(0).Q50-B50),
-                    "B20="+(a.get(0).Q20-B20),
-                    "B10="+(a.get(0).Q10-B10),
-                    "B5="+(a.get(0).Q5-B5),
-                    "B1="+(a.get(0).Q1-B1));
+                    "Saldo="+(a.get(0).Saldo-nSaldo),           
+                    "Q200="+(a.get(0).Q200-B200),       //IMPORTANTE QUE CONCUERDEN EL FORMATO DE Qnumero
+                    "Q100="+(a.get(0).Q100-B100),
+                    "Q50="+(a.get(0).Q50-B50),
+                    "Q20="+(a.get(0).Q20-B20),
+                    "Q10="+(a.get(0).Q10-B10),
+                    "Q5="+(a.get(0).Q5-B5),
+                    "Q1="+(a.get(0).Q1-B1));
             
             crear.close();
             
@@ -145,7 +145,7 @@ public class frmRetiros extends javax.swing.JFrame {
     }
     
     
-    private void modLim(int nSaldo){
+    private void modLim(int nSaldo){        //Actualiza el límite
         String archivo = "user"+(auxiliar+1)+".txt";
         File crea_ubicación = new File(ubi5);
                 
@@ -181,7 +181,7 @@ public class frmRetiros extends javax.swing.JFrame {
         ordenarPorNumero(registros);
         ordenarPorNumero(registros2);
         
-        File s = new File(ubi2+"record.txt");
+        File s = new File(ubi2+"record.txt");       //Quien fue el que inicio sesión
         if(s.exists()){
             
             try{
@@ -253,13 +253,13 @@ public class frmRetiros extends javax.swing.JFrame {
                 mostrar.load(fis);               
 
                 O = new inic(Integer.parseInt(mostrar.getProperty("Saldo")),
-                                    Integer.parseInt(mostrar.getProperty("B200")),
-                                    Integer.parseInt(mostrar.getProperty("B100")),
-                                    Integer.parseInt(mostrar.getProperty("B50")),
-                                    Integer.parseInt(mostrar.getProperty("B20")),
-                                    Integer.parseInt(mostrar.getProperty("B10")),
-                                    Integer.parseInt(mostrar.getProperty("B5")),
-                                    Integer.parseInt(mostrar.getProperty("B1")));
+                                    Integer.parseInt(mostrar.getProperty("Q200")),
+                                    Integer.parseInt(mostrar.getProperty("Q100")),
+                                    Integer.parseInt(mostrar.getProperty("Q50")),
+                                    Integer.parseInt(mostrar.getProperty("Q20")),
+                                    Integer.parseInt(mostrar.getProperty("Q10")),
+                                    Integer.parseInt(mostrar.getProperty("Q5")),
+                                    Integer.parseInt(mostrar.getProperty("Q1")));
                 a.add(O);
                 
             }catch(Exception e){}
@@ -272,10 +272,8 @@ public class frmRetiros extends javax.swing.JFrame {
         for(int i = 0;i<=B;i++){
             aux = aux - i*num;
             if(aux == 0){
-                //System.out.println(i);
                 return (i);
             }else if(aux < 0){
-                //System.out.println(i-1);
                 return (i-1);
             }else{
                 aux = C;
@@ -409,49 +407,53 @@ public class frmRetiros extends javax.swing.JFrame {
     private void btnAceptar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptar1ActionPerformed
         int E = 0;
         int B200, B100, B50, B20, B10, B5, B1;
+        int value = (Integer) txtretiro.getValue();
         
-        if(Integer.parseInt(txtretiro.getValue().toString())>d.get(0).Limite){
-            E = 1;        
-        /*}else if(Integer.parseInt(txtretiro.getValue().toString())>a.get(0).Saldo){
-            E = 2;
-        */}else if(Integer.parseInt(txtretiro.getValue().toString())>c.get(0).saldo){
-            E = 3;
+        if(value==0){
+            JOptionPane.showMessageDialog(null, "La cantidad a retirar no puede ser igual a 0", "RETIRO", HEIGHT);
         }else{
-            int saldo = Integer.parseInt(txtretiro.getValue().toString());
-            B200 = getBilletes(a.get(0).Q200, 200, saldo);
-            B100 = getBilletes(a.get(0).Q100, 100, saldo-B200*200);
-            B50 = getBilletes(a.get(0).Q50, 50, saldo-B200*200-B100*100);
-            B20 = getBilletes(a.get(0).Q20, 20, saldo-B200*200-B100*100-B50*50);
-            B10 = getBilletes(a.get(0).Q10, 10, saldo-B200*200-B100*100-B50*50-B20*20);
-            B5 = getBilletes(a.get(0).Q5, 5, saldo-B200*200-B100*100-B50*50-B20*20-B10*10);
-            B1 = getBilletes(a.get(0).Q1, 1, saldo-B200*200-B100*100-B50*50-B20*20-B10*10-B5*5);
-            modCajero(B200, B100, B50, B20, B10, B5, B1, saldo);
-            
-            d.get(0).Limite = d.get(0).Limite - saldo;
-            a.get(0).Saldo = a.get(0).Saldo - saldo;
-                a.get(0).Q200 = a.get(0).Q200 - B200;
-                a.get(0).Q100 = a.get(0).Q100 - B100;
-                a.get(0).Q50 = a.get(0).Q50 - B50;
-                a.get(0).Q20 = a.get(0).Q20 - B20;
-                a.get(0).Q10 = a.get(0).Q10 - B10;
-                a.get(0).Q5 = a.get(0).Q5 - B5;
-                a.get(0).Q1 = a.get(0).Q1 - B1;
-                
-            c.get(0).saldo = c.get(0).saldo - saldo;
-        }
-        if(E!=0){
-            if(E==1){
-                JOptionPane.showMessageDialog(null, "El Retiro supera el límite diario de su cuenta", "RETIRO", HEIGHT);
-            }else if(E==2){
-                JOptionPane.showMessageDialog(null, "El Retiro supera la capacidad del cajero", "RETIRO", HEIGHT);
-            }else if(E==3){
-                JOptionPane.showMessageDialog(null, "Saldo Insuficiente", "RETIRO", HEIGHT);
-            }
-        }else{
-            Crear();
-            JOptionPane.showMessageDialog(null, "RETIRO EXITOSO", "RETIRO", HEIGHT);
-        }
+            if(Integer.parseInt(txtretiro.getValue().toString())>d.get(0).Limite){
+                E = 1;        
+            }else if(Integer.parseInt(txtretiro.getValue().toString())>a.get(0).Saldo){
+                E = 2;
+            }else if(Integer.parseInt(txtretiro.getValue().toString())>c.get(0).saldo){
+                E = 3;
+            }else{
+                int saldo = Integer.parseInt(txtretiro.getValue().toString());
+                B200 = getBilletes(a.get(0).Q200, 200, saldo);
+                B100 = getBilletes(a.get(0).Q100, 100, saldo-B200*200);
+                B50 = getBilletes(a.get(0).Q50, 50, saldo-B200*200-B100*100);
+                B20 = getBilletes(a.get(0).Q20, 20, saldo-B200*200-B100*100-B50*50);
+                B10 = getBilletes(a.get(0).Q10, 10, saldo-B200*200-B100*100-B50*50-B20*20);
+                B5 = getBilletes(a.get(0).Q5, 5, saldo-B200*200-B100*100-B50*50-B20*20-B10*10);
+                B1 = getBilletes(a.get(0).Q1, 1, saldo-B200*200-B100*100-B50*50-B20*20-B10*10-B5*5);
+                modCajero(B200, B100, B50, B20, B10, B5, B1, saldo);
 
+                d.get(0).Limite = d.get(0).Limite - saldo;
+                a.get(0).Saldo = a.get(0).Saldo - saldo;
+                    a.get(0).Q200 = a.get(0).Q200 - B200;
+                    a.get(0).Q100 = a.get(0).Q100 - B100;
+                    a.get(0).Q50 = a.get(0).Q50 - B50;
+                    a.get(0).Q20 = a.get(0).Q20 - B20;
+                    a.get(0).Q10 = a.get(0).Q10 - B10;
+                    a.get(0).Q5 = a.get(0).Q5 - B5;
+                    a.get(0).Q1 = a.get(0).Q1 - B1;
+
+                c.get(0).saldo = c.get(0).saldo - saldo;
+            }
+            if(E!=0){
+                if(E==1){
+                    JOptionPane.showMessageDialog(null, "El Retiro supera el límite diario de su cuenta", "RETIRO", HEIGHT);
+                }else if(E==2){
+                    JOptionPane.showMessageDialog(null, "El Retiro supera la capacidad del cajero", "RETIRO", HEIGHT);
+                }else if(E==3){
+                    JOptionPane.showMessageDialog(null, "Saldo Insuficiente", "RETIRO", HEIGHT);
+                }
+            }else{
+                Crear();
+                JOptionPane.showMessageDialog(null, "RETIRO EXITOSO", "RETIRO", HEIGHT);
+            }
+        }
     }//GEN-LAST:event_btnAceptar1ActionPerformed
 
     /**
