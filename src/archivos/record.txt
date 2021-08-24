@@ -2,5 +2,5 @@ Nombre=Andres Tarott
 Tarjeta=6666
 PIN=6666
 Limite=2000
-Fecha=21/8/2021
-Hora=18:18:1
+Fecha=23/8/2021
+Hora=18:23:46
