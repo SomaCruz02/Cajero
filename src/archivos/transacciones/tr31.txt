@@ -1,0 +1,5 @@
+Tarjeta=6666
+Fecha=23-8-2021
+Hora=17:11:11
+Monto=500
+Tipo=Deposito
