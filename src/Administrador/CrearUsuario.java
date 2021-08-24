@@ -7,6 +7,7 @@
 package Administrador;
 
 import Menu.frmMenu_Administrador;
+import Metodos.lim;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -26,13 +27,20 @@ public class CrearUsuario extends javax.swing.JFrame {
 
     String barra = File.separator;      //Separador de la maquina 
     String ruta = System.getProperty("user.dir")+barra+"src"+barra+"archivos"+barra+"usuarios"+barra;        //Ruta principal
-  
+    String ubi2 = System.getProperty("user.dir")+barra+"src"+barra+"archivos"+barra;
+    String ubi4 = ubi2+"usuarios"+barra;
+    String ubi5 = ubi2+"limite"+barra;
+    
     File contenedor = new File(ruta);       
     File[] registros = contenedor.listFiles();      //Encuentra los registros de usuarios
 
+    File contenedor2 = new File(ubi5);
+    
     public user O;
     public ArrayList<user> a = new ArrayList<user>();
-    
+    public ArrayList<user> c = new ArrayList<user>();
+    public ArrayList<lim> d = new ArrayList<lim>();
+    public int auxiliar = 0;
      public void ordenarPorNumero(File[] str) {    // Ordena los usuarios comparandolos unos con otros
         Arrays.sort(str, new Comparator<File>() {
                 public int compare(File o1, File o2) {
@@ -66,9 +74,9 @@ public class CrearUsuario extends javax.swing.JFrame {
         
         ordenarPorNumero(registros); //ordena los usuarios mediante el metodo
         
-        for(int i=0;i<registros.length;i++){
+        for( auxiliar=0;auxiliar<registros.length;auxiliar++){
         
-            File url = new File(ruta+registros[i].getName());
+            File url = new File(ruta+registros[auxiliar].getName());
             try{
                 FileInputStream fis = new FileInputStream(url);
                 Properties mostrar = new Properties();
@@ -116,9 +124,50 @@ public class CrearUsuario extends javax.swing.JFrame {
             a.add(O);
             
         }catch(Exception e){}     
-        
+       modLim((int) montolimite.getValue());
     }
     
+//    private void modUser(int nSaldo){       //Modificar la información del usuario   
+//        String archivo = "user"+(auxiliar+1)+".txt";
+//        File crea_ubicación = new File(ubi4);
+//                
+//        try{    
+//            
+//            crea_ubicación.mkdirs();
+//            Formatter crear = new Formatter(ubi4+archivo);
+//            
+//            crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
+//                    "Nombre="+c.get(0).Nombre,
+//                    "Tarjeta="+c.get(0).Tarjeta,
+//                    "PIN="+c.get(0).Pin,
+//                    "Limite="+c.get(0).limite,
+//                    "Saldo="+(c.get(0).saldo-nSaldo),
+//                    "Tipo="+c.get(0).tipo);
+//            
+//            crear.close();
+//            
+//        }catch(Exception e){}    
+//        modLim(nSaldo);
+//    }
+    
+     private void modLim(int nSaldo){        //Actualiza el límite
+        String archivo = "user"+(auxiliar+1)+".txt";
+        File crea_ubicación = new File(ubi5);
+                
+        try{    
+            
+            crea_ubicación.mkdirs();
+            Formatter crear = new Formatter(ubi5+archivo);
+            
+            crear.format("%s\r\n%s",
+                    "Tarjeta="+notarjeta.getText().toUpperCase(),
+                    "Limite="+montolimite.getValue());
+            
+            crear.close();
+            
+        }catch(Exception e){}    
+        
+    } 
     
     /** This method is called from within the constructor to
      * initialize the form.

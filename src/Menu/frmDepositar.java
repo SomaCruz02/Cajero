@@ -113,13 +113,13 @@ public class frmDepositar extends javax.swing.JFrame {
                 mostrar.load(fis);               
 
                 O = new inic(Integer.parseInt(mostrar.getProperty("Saldo")),
-                                    Integer.parseInt(mostrar.getProperty("B200")),
-                                    Integer.parseInt(mostrar.getProperty("B100")),
-                                    Integer.parseInt(mostrar.getProperty("B50")),
-                                    Integer.parseInt(mostrar.getProperty("B20")),
-                                    Integer.parseInt(mostrar.getProperty("B10")),
-                                    Integer.parseInt(mostrar.getProperty("B5")),
-                                    Integer.parseInt(mostrar.getProperty("B1")));
+                                    Integer.parseInt(mostrar.getProperty("Q200")),
+                                    Integer.parseInt(mostrar.getProperty("Q100")),
+                                    Integer.parseInt(mostrar.getProperty("Q50")),
+                                    Integer.parseInt(mostrar.getProperty("Q20")),
+                                    Integer.parseInt(mostrar.getProperty("Q10")),
+                                    Integer.parseInt(mostrar.getProperty("Q5")),
+                                    Integer.parseInt(mostrar.getProperty("Q1")));
                 a.add(O);
 
             }catch(Exception e){}
@@ -518,13 +518,13 @@ public class frmDepositar extends javax.swing.JFrame {
             
             crear.format("%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s",
                     "Saldo="+(Integer.parseInt(saldo.getValue().toString())+a.get(0).Saldo),
-                    "B200="+(Integer.parseInt(B200.getValue().toString())+a.get(0).Q200),
-                    "B100="+(Integer.parseInt(B100.getValue().toString())+a.get(0).Q100),
-                    "B50="+(Integer.parseInt(B50.getValue().toString())+a.get(0).Q50),
-                    "B20="+(Integer.parseInt(B20.getValue().toString())+a.get(0).Q20),
-                    "B10="+(Integer.parseInt(B10.getValue().toString())+a.get(0).Q10),
-                    "B5="+(Integer.parseInt(B5.getValue().toString())+a.get(0).Q5),
-                    "B1="+(Integer.parseInt(B1.getValue().toString())+a.get(0).Q1));
+                    "Q200="+(Integer.parseInt(B200.getValue().toString())+a.get(0).Q200),
+                    "Q100="+(Integer.parseInt(B100.getValue().toString())+a.get(0).Q100),
+                    "Q50="+(Integer.parseInt(B50.getValue().toString())+a.get(0).Q50),
+                    "Q20="+(Integer.parseInt(B20.getValue().toString())+a.get(0).Q20),
+                    "Q10="+(Integer.parseInt(B10.getValue().toString())+a.get(0).Q10),
+                    "Q5="+(Integer.parseInt(B5.getValue().toString())+a.get(0).Q5),
+                    "Q1="+(Integer.parseInt(B1.getValue().toString())+a.get(0).Q1));
             
             crear.close();
             
