@@ -1,2 +1,2 @@
 Tarjeta=6666
-Limite=1220
+Limite=2000

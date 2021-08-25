@@ -15,4 +15,6 @@ public class trns {
         this.Monto = Monto;
         this.Tipo = Tipo;
     }
+
 }
+

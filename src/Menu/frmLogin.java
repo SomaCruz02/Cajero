@@ -93,7 +93,7 @@ public class frmLogin extends javax.swing.JFrame {
         );
     }*/
     
-    /*private void Login(int i){
+    private void Login(int i){
         File contenedor = new File(rutaLog);
         File[] registros = contenedor.listFiles();
         
@@ -117,7 +117,7 @@ public class frmLogin extends javax.swing.JFrame {
             
         }catch(Exception e){}     
         
-    }*/
+    }
     
     private void Crear(int i){
         String archivo = ("record")+".txt";     //nombre del archivo .txt
