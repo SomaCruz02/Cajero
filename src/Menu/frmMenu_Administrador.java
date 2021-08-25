@@ -5,6 +5,7 @@
  */
 package Menu;
 
+import Administrador.Consulta;
 import Administrador.CrearUsuario;
 import Administrador.ModLímite;
 import Administrador.ModTarjeta;
@@ -291,6 +292,9 @@ public class frmMenu_Administrador extends javax.swing.JFrame {
 
     private void btnconsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnconsultaActionPerformed
         // TODO add your handling code here:
+         Consulta x = new Consulta();
+        this.setVisible(false); 
+        x.setVisible(true); //Abrir el menu de creacion de usuario
     }//GEN-LAST:event_btnconsultaActionPerformed
 
     private void btncrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncrearActionPerformed
