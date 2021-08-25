@@ -162,13 +162,13 @@ public class frmIniciaCajero_Admin extends javax.swing.JFrame {
 
         if(Total<Integer.parseInt(Saldo.getValue().toString()) || Total>Integer.parseInt(Saldo.getValue().toString())){
             E = true;
-            T = "Distribución de billetes incongruente "+Total+"\tno es igual a "+Saldo.getValue();
+            T = "Distribución de billetes incongruente "+Total+" no es igual a "+Saldo.getValue();
         }else if(Integer.parseInt(Saldo.getValue().toString()) == 0){
             E = true;
             T = "El saldo debe ser mayor a 0";
         }else{
             E = false;
-            T = "Distribución correcta <br>"+Total+" = "+Saldo.getValue();
+            T = "Distribución correcta "+Total+" = "+Saldo.getValue();
         }
         Alerta.setText(T);
     }

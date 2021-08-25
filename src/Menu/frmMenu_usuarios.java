@@ -246,11 +246,15 @@ public class frmMenu_usuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_btndepositarActionPerformed
 
     private void btntransaccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntransaccionesActionPerformed
-        // TODO add your handling code here:
+        frmTransacciones x = new frmTransacciones();
+        this.setVisible(false);
+        x.setVisible(true);
     }//GEN-LAST:event_btntransaccionesActionPerformed
 
     private void btnsaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaldoActionPerformed
-        // TODO add your handling code here:
+        frmSaldo x = new frmSaldo();
+        this.setVisible(false);
+        x.setVisible(true);
     }//GEN-LAST:event_btnsaldoActionPerformed
 
     private void btnregresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregresarActionPerformed
