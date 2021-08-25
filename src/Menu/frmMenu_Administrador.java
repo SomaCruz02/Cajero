@@ -4,12 +4,8 @@
  * and open the template in the editor.
  */
 package Menu;
-
-<<<<<<< Updated upstream
 import Administrador.Consulta;
-=======
 import Administrador.ControlUsuario;
->>>>>>> Stashed changes
 import Administrador.CrearUsuario;
 import Administrador.ModLímite;
 import Administrador.ModTarjeta;
