@@ -1,4 +1,0 @@
-Tarjeta=ABCD-ABCDEF-ABCD
-Fecha=22-8-2020
-PIN=9999
-NuevoPIN=8785
