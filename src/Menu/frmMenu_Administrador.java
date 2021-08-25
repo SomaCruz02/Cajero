@@ -5,7 +5,11 @@
  */
 package Menu;
 
+<<<<<<< Updated upstream
 import Administrador.Consulta;
+=======
+import Administrador.ControlUsuario;
+>>>>>>> Stashed changes
 import Administrador.CrearUsuario;
 import Administrador.ModLímite;
 import Administrador.ModTarjeta;
@@ -287,7 +291,9 @@ public class frmMenu_Administrador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncontrolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncontrolActionPerformed
-        // TODO add your handling code here:
+        ControlUsuario x = new ControlUsuario();
+        this.setVisible(false);
+        x.setVisible(true);
     }//GEN-LAST:event_btncontrolActionPerformed
 
     private void btnconsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnconsultaActionPerformed

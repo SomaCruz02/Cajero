@@ -1,6 +1,15 @@
+<<<<<<< Updated upstream
 Nombre=MIja
 Tarjeta=2222222224444446
 PIN=7777
 Limite=3000
 Fecha=24/8/2021
 Hora=19:39:56
+=======
+Nombre=Administrador
+Tarjeta=7777
+PIN=7777
+Limite=7000
+Fecha=24/8/2021
+Hora=19:19:22
+>>>>>>> Stashed changes
