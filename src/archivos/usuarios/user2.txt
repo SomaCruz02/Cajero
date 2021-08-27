@@ -1,6 +1,6 @@
 Nombre=Andres Tarott
 Tarjeta=6666
-PIN=6666
+PIN=GG22
 Limite=2000
-Saldo=3620
+Saldo=3320
 Tipo=user

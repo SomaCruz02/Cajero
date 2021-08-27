@@ -72,7 +72,7 @@ public class frmTransacciones extends javax.swing.JFrame {
 
         
         //SE REGISTRA LOS DATOS DE LA SESION INICIADA
-        File s = new File(ubi2+"sesion.txt");
+        File s = new File(ubi2+"record.txt");
         if(s.exists()){
             
             try{
