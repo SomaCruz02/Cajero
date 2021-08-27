@@ -1,0 +1,6 @@
+Nombre=Carlos Meza GuzmÃÂÃÂ¡n
+Tarjeta=1234123412341234
+PIN=A123
+Limite=1000
+Fecha=26/8/2021
+Hora=21:33:29

@@ -333,7 +333,7 @@ public class frmLogin extends javax.swing.JFrame {
                     }else{
                         if (f.exists()) {       //Si se ha iniciado cajero
                             Crear(i);
-                            //Login(i);
+                            Login(i);
                             frmMenu_usuarios window = new frmMenu_usuarios();
                             this.setVisible(false);
                             window.setVisible(true);
