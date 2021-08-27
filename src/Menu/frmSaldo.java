@@ -74,7 +74,7 @@ public class frmSaldo extends javax.swing.JFrame {
         ordenarPorNumero(registros2);
         
         //SE REGISTRA LOS DATOS DE LA SESION INICIADA
-        File s = new File(ubi1+"sesion.txt");
+        File s = new File(ubi1+"record.txt");
         if(s.exists()){
             
             try{
