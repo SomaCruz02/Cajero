@@ -1,5 +1,0 @@
-Tarjeta=6666
-Fecha=21-8-2021
-Hora=18:18:6
-Monto=500
-Tipo=Retiro

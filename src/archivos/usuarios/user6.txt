@@ -1,6 +1,0 @@
-Nombre=Diego AndrÃ©s
-Tarjeta=1234567890123456
-PIN=2222
-Limite=2220
-Saldo=460
-Tipo=user

@@ -1,6 +1,6 @@
-Nombre=Henri Yaxcal
-Tarjeta=1234-123456-1234
-PIN=1234
-Limite=2000
-Fecha=20/8/2020
-Hora=22:13:27
+Nombre=Mario Armas
+Tarjeta=4444555566667777
+PIN=A123
+Limite=3000
+Fecha=28/8/2021
+Hora=12:44:53

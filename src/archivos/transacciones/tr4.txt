@@ -1,5 +1,5 @@
-Tarjeta=ABCD-ABCDEF-ABCD
-Fecha=20-8-2020
-Hora=22:22:27
-Monto=125
+Tarjeta=1234567891234567
+Fecha=28-8-2021
+Hora=12:42:28
+Monto=333
 Tipo=Retiro

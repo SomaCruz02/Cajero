@@ -1,6 +1,0 @@
-Nombre=Administrador
-Tarjeta=7777
-PIN=7777
-Limite=7000
-Fecha=28/8/2021
-Hora=0:58:35

@@ -1,6 +1,6 @@
-Nombre=Andres Tarott
-Tarjeta=6666
+Nombre=Carlos Meza
+Tarjeta=1111222233334444
 PIN=GG22
-Limite=2000
-Saldo=3320
+Limite=3000
+Saldo=2800
 Tipo=user

@@ -1,6 +1,6 @@
-Nombre=Pedro Perez
-Tarjeta=ABCD-ABCDEF-ABCD
-PIN=8785
-Limite=10000
-Saldo=1319
+Nombre=Kevin Ochoa
+Tarjeta=1234567891234567
+PIN=C444
+Limite=1500
+Saldo=1467
 Tipo=user

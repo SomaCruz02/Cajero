@@ -1,6 +1,6 @@
-Nombre=Henri Yaxcal
-Tarjeta=1234-123456-1234
-PIN=1234
-Limite=2000
-Fecha=20/8/2020
-Hora=7:55:41
+Nombre=Carlos Meza
+Tarjeta=1111222233334444
+PIN=GG11
+Limite=3000
+Fecha=28/8/2021
+Hora=12:38:30

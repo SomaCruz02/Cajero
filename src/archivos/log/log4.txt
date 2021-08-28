@@ -1,6 +1,6 @@
-Nombre=Henri Yaxcal
-Tarjeta=1234-123456-1234
-PIN=1234
-Limite=2000
-Fecha=20/8/2020
-Hora=22:10:8
+Nombre=Kevin Ochoa
+Tarjeta=1234567891234567
+PIN=C444
+Limite=1500
+Fecha=28/8/2021
+Hora=12:41:55

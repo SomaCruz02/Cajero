@@ -1,5 +1,5 @@
-Tarjeta=1234-123456-1234
-Fecha=20-8-2020
-Hora=22:13:34
-Monto=500
-Tipo=Retiro
+Tarjeta=1111222233334444
+Fecha=28-8-2021
+Hora=12:40:3
+Monto=300
+Tipo=Deposito

@@ -1,2 +1,2 @@
-Tarjeta=7777
+Tarjeta=7777777777777777
 Limite=7000

@@ -1,5 +1,0 @@
-Tarjeta=1234123412341234
-Fecha=26-8-2021
-Hora=21:33:53
-Monto=100
-Tipo=Deposito

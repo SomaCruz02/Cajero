@@ -1,5 +1,0 @@
-Tarjeta=1234-123456-1234
-Fecha=20-8-2020
-Hora=22:54:15
-Monto=90
-Tipo=Deposito

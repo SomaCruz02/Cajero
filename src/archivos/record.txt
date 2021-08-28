@@ -1,6 +1,6 @@
-Nombre=Administrador
-Tarjeta=7777
-PIN=7777
-Limite=7000
+Nombre=Mario Armas
+Tarjeta=4444555566667777
+PIN=A123
+Limite=3000
 Fecha=28/8/2021
-Hora=1:2:13
+Hora=12:44:53

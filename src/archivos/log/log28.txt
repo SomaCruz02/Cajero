@@ -1,6 +1,0 @@
-Nombre=Andres Tarott
-Tarjeta=6666
-PIN=GG22
-Limite=2000
-Fecha=26/8/2021
-Hora=21:40:7

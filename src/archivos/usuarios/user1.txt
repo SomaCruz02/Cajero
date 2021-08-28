@@ -1,5 +1,5 @@
 Nombre=Administrador
-Tarjeta=7777
+Tarjeta=7777777777777777
 PIN=7777
 Limite=7000
 Saldo=2000

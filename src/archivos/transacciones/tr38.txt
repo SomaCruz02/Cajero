@@ -1,5 +1,0 @@
-Tarjeta=2222222224444446
-Fecha=28-8-2021
-Hora=0:35:56
-Monto=200
-Tipo=Deposito

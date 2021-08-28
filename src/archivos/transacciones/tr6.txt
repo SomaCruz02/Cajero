@@ -1,5 +1,5 @@
-Tarjeta=ABCD-ABCDEF-ABCD
-Fecha=20-8-2020
-Hora=22:47:5
-Monto=19
+Tarjeta=4444555566667777
+Fecha=28-8-2021
+Hora=12:46:10
+Monto=500
 Tipo=Deposito
