@@ -2,5 +2,5 @@ Nombre=MIja
 Tarjeta=2222222224444446
 PIN=7777
 Limite=3000
-Saldo=2100
+Saldo=1800
 Tipo=user
