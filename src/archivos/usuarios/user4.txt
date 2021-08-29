@@ -1,6 +1,6 @@
 Nombre=Kevin Ochoa
-Tarjeta=1234567891234567
+Tarjeta=1111222233334445
 PIN=C444
-Limite=1500
+Limite=1000
 Saldo=1467
 Tipo=user

@@ -1,2 +1,2 @@
 Tarjeta=4444555566667777
-Limite=2667
+Limite=3000
