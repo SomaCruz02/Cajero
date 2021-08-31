@@ -1,0 +1,6 @@
+Nombre=Nicole Adams
+Tarjeta=5555555566666666
+PIN=7777
+Limite=3000
+Saldo=5000
+Tipo=user

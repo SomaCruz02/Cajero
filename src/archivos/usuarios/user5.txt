@@ -1,0 +1,6 @@
+Nombre=Erik Toribio
+Tarjeta=1212121212121212
+PIN=2223
+Limite=4000
+Saldo=6000
+Tipo=user
